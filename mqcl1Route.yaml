@@ -9,6 +9,6 @@ spec:
     kind: Service
     name: mqcl1-ibm-mq 
   port:
-    targetPort: 11414
+    targetPort: 1414
   tls:
     termination: passthrough
