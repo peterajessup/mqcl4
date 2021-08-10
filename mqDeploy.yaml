@@ -6,7 +6,7 @@ metadata:
 spec:
   license:
     accept: true
-    license: L-RJON-BYRMYW
+    license: L-RJON-BXUPZ2
     use: NonProduction
   queueManager:
     image: cp.icr.io/cp/ibm-mqadvanced-server-integration:9.2.2.0-r1-amd64
