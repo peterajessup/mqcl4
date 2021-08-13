@@ -4,10 +4,10 @@ metadata:
   name: mqcl1route 
   namespace: ibmmq 
 spec:
-  host: tlsone.chl.mq.ibm.com
+  host: tlsthree.chl.mq.ibm.com
   to:
     kind: Service
-    name: mqcl1-ibm-mq 
+    name: mqcl3-ibm-mq 
   port:
     targetPort: 1414
   tls:
