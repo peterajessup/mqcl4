@@ -17,7 +17,7 @@ spec:
     availability:
      type: SingleInstance
 #     type: NativeHA
-    name: CL1
+    name: CL3
     mqsc:
     - configMap:
         name: cl3-mqsc
