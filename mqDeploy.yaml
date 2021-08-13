@@ -1,7 +1,7 @@
 apiVersion: mq.ibm.com/v1beta1
 kind: QueueManager
 metadata:
-  name: mqcl1
+  name: mqcl3
   namespace: ibmmq
 spec:
   license:
@@ -20,7 +20,7 @@ spec:
     name: CL1
     mqsc:
     - configMap:
-        name: cl1-mqsc
+        name: cl3-mqsc
         items:
         - cl.mqsc
   template:
@@ -40,7 +40,7 @@ spec:
     keys:
       - name: label1
         secret:
-          secretName: mqcl1key
+          secretName: mqcl3key
           items:
             - tls.key
             - tls.crt
