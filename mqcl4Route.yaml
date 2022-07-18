@@ -1,13 +1,13 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  name: mqcl3route 
+  name: mqcl4route 
   namespace: mq 
 spec:
-  host: tlsthree.chl.mq.ibm.com
+  host: tlsfour.chl.mq.ibm.com
   to:
     kind: Service
-    name: mqcl3-ibm-mq 
+    name: mqcl4-ibm-mq 
   port:
     targetPort: 1414
   tls:
