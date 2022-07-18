@@ -1,7 +1,7 @@
 apiVersion: mq.ibm.com/v1beta1
 kind: QueueManager
 metadata:
-  name: mqcl3
+  name: mqcl4
   namespace: mq
 spec:
   license:
@@ -18,10 +18,10 @@ spec:
     availability:
      type: SingleInstance
 #     type: NativeHA
-    name: CL3
+    name: CL4
     mqsc:
     - configMap:
-        name: cl3-mqsc
+        name: cl4-mqsc
         items:
         - cl.mqsc
   template:
@@ -41,7 +41,7 @@ spec:
     keys:
       - name: label1
         secret:
-          secretName: mqcl3key
+          secretName: mqcl4key
           items:
             - tls.key
             - tls.crt
