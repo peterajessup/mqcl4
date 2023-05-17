@@ -6,15 +6,20 @@ metadata:
 spec:
   license:
     accept: true
-    license: L-RJON-BZFQU2
+    license: L-RJON-CD3JKX
     metric: VirtualProcessorCore
     use: NonProduction
   queueManager:
-    image: cp.icr.io/cp/ibm-mqadvanced-server-integration:9.2.3.0-r1-amd64
-    imagePullPolicy: Always
     storage:
       queueManager:
         enabled: true
+    resources:
+      limits:
+        cpu: '0.3'
+        memory: 1Gi
+      requests:
+        cpu: '0.3'
+        memory: 1Gi
     availability:
      type: SingleInstance
 #     type: NativeHA
@@ -31,12 +36,9 @@ spec:
             - name: MQSNOAUT
               value: 'yes'
           name: qmgr
-  version: 9.2.3.0-r1
+  version: 9.3.1.0-r1
   web:
     enabled: true
-  tracing:
-    enabled: false
-    namespace: od
   pki:
     keys:
       - name: label1
