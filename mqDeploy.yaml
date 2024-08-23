@@ -2,7 +2,7 @@ apiVersion: mq.ibm.com/v1beta1
 kind: QueueManager
 metadata:
   name: mqcl4
-  namespace: wbc9
+  namespace: mq
 spec:
   license:
     accept: true
@@ -11,8 +11,9 @@ spec:
     use: NonProduction
   queueManager:
     storage:
+      defaultClass: ocs-storagecluster-cephfs
       queueManager:
-        enabled: true
+        type: persistent-claim
     resources:
       limits:
         cpu: '0.3'
@@ -21,8 +22,8 @@ spec:
         cpu: '0.3'
         memory: 1Gi
     availability:
-     type: SingleInstance
-#     type: NativeHA
+     #type: SingleInstance
+      type: NativeHA
     name: CL4
     mqsc:
     - configMap:
@@ -36,7 +37,7 @@ spec:
             - name: MQSNOAUT
               value: 'yes'
           name: qmgr
-  version: 9.3.1.0-r1
+  version: 9.4.0.0-r1
   web:
     enabled: true
   pki:
